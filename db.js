@@ -1,8 +1,11 @@
 const mongoose=require('mongoose');
 
+
+require('dotenv').config();
+
 // const mongodbURL= "mongodb://127.0.0.1:27017/justiceleague"
 
-const mongodbIntURL="mongodb+srv://venkimoon4:venki8904@heros.xz45xn9.mongodb.net/"
+const mongodbIntURL=process.env.mongodbOnlineURL;
 
 mongoose.connect(mongodbIntURL);
 

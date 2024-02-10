@@ -1,5 +1,8 @@
 const express=require('express');
 const app=express();
+require('dotenv').config();
+
+const PORT=process.env.PORT || 3000
 
 const db=require('./db.js');
 
@@ -11,8 +14,6 @@ const LeagueRoutes=require('./routes/LeagueRoutes.js')
 app.use('/justiceleague',LeagueRoutes);
 
 
-
-
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
   console.log('Server Started')
 })
